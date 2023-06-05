@@ -1,4 +1,15 @@
-.chapterContent {
+.contents li {
+    margin-bottom: 30px;
+  }
+
+  .contents li a {
+    color: #dbdbdb;
+    margin-left: 50px;
+    font-size: 50px;
+    font-weight: 300;
+  }
+    
+    .chapterContent {
     color: #dbdbdb;
     margin-left: 140px;
     font-size: 20px;
