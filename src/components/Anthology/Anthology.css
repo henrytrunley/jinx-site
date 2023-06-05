@@ -1,0 +1,22 @@
+.post-content {
+    color: #dbdbdb;
+    margin-left: 140px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+    width: 600px;
+    margin-bottom: 400px;
+  }
+
+  .post-title {
+    color: #dbdbdb;
+    font-size: 45px;
+    font-weight: 300;
+  }
+
+  .paupers-daughter-verse {
+    font-family: inherit;
+    text-align: center;
+    margin-left: 0px;
+    line-height: 1.5;
+  }

@@ -1,13 +1,12 @@
 
-import { Fragment } from "react";
-import { useState } from "react";
-import { Header, PostList } from "./components/index";
+import { Fragment, useState } from "react";
+import { Header, Anthology } from "./components/index";
 import "./App.css";
 
 
 function GetPage({ currentPage }) {
     if (currentPage == "home") {
-        return PostList()
+        return Anthology()
     }
     else {
         return (

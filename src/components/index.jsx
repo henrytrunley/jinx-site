@@ -1,5 +1,4 @@
 import Header from "./Header/Header"
-import PostList from "./PostList/PostList"
-import Post from "./Post/Post"
+import Anthology from "./Anthology/Anthology"
 
-export {Header, PostList, Post};
+export { Header, Anthology };
