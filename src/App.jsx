@@ -1,8 +1,7 @@
 
 import { Fragment } from "react";
 import { useState } from "react";
-import Header from "./components/NavBar";
-import PostList from "./components/PostList";
+import { Header, PostList } from "./components/index";
 import "./App.css";
 
 
