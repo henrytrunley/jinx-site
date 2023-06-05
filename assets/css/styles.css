@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Newsreader', serif;
+    background-color: #202020;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  header {
+    position: fixed;
+    color: #dbdbdb;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .line {
+    width: 25px;
+    height: 2px;
+    background-color: #dbdbdb;
+    margin-bottom: 5px;
+  }
+
+  .title a {
+    color: #dbdbdb;
+    margin-left: 50px;
+    font-size: 25px;
+    font-weight: 400;
+  }
+
+  nav {
+    display: None;
+    flex-direction: column;
+    margin-left: 50px;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 200px;
+  }
+  
+  nav a {
+    color: #dbdbdb;
+    text-decoration: none;
+    margin-bottom: 50px;
+  }
+  
+  main {
+    color: #dbdbdb;
+    padding-left: 500px;
+    padding-top: 300px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .posts li {
+    margin-bottom: 30px;
+  }
+
+  .posts li a {
+    color: #dbdbdb;
+    margin-left: 50px;
+    font-size: 50px;
+    font-weight: 300;
+  }
+
+  .post-content {
+    color: #dbdbdb;
+    margin-left: 140px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+    width: 600px;
+    margin-bottom: 400px;
+  }
+
+  .post-title {
+    color: #dbdbdb;
+    font-size: 45px;
+    font-weight: 300;
+  }
+
+  .paupers-daughter-verse {
+    font-family: inherit;
+    text-align: center;
+    margin-left: 0px;
+    line-height: 1.5;
+  }
