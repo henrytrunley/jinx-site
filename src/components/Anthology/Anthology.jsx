@@ -1,6 +1,8 @@
 import { Fragment, useState } from "react";
 import "./Anthology.css"
 
+import smokeAndMirrors from "./Chapters/1-smoke_and_mirrors.jsx"
+
 
 const orderedChapters = [
     {
@@ -11,7 +13,7 @@ const orderedChapters = [
     {
         index: 1,
         title: "Smoke and Mirrors",
-        content: "Test body text for s&m",
+        content: smokeAndMirrors,
     },
     {
         index: 2,
@@ -24,10 +26,10 @@ const orderedChapters = [
 function Chapter({ chapterIndex }) {
     const chapter = orderedChapters[chapterIndex];
     return (
-        <Fragment>
-          <h1>{chapter.title}</h1>
-          <div>{chapter.content}</div>
-        </Fragment>
+        <div className="chapter">
+          <h1 className="chapterTitle">{chapter.title}</h1>
+          <div className="chapterContent">{chapter.content}</div>
+        </div>
     );
 };
 
