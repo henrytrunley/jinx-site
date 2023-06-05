@@ -18,7 +18,7 @@ function GetPage({ currentPage }) {
 
 
 function App() {
-    const [currentPage, setCurrentPage] = useState("about");
+    const [currentPage, setCurrentPage] = useState("home");
     
     return (
       <Fragment>
