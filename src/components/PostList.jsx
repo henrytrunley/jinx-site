@@ -2,16 +2,16 @@ import "./PostList.css"
 
 function PostList() {
     return (
-        <div class="posts">
+        <div className="posts">
           <ul>
             <li>
-              <a href="#">The Pauper's Daughter</a>
+              <a >The Pauper's Daughter</a>
             </li>
             <li>
-              <a href="#">Smoke and Mirrors</a>
+              <a >Smoke and Mirrors</a>
             </li>
             <li>
-              <a href="#">Leprechaun Hunt</a>
+              <a >Leprechaun Hunt</a>
             </li>
           </ul>
         </div>

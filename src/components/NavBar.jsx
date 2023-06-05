@@ -2,24 +2,33 @@ import { useState } from "react";
 import "./NavBar.css"
 
 
-function NavBar() {
+function NavBar({ setCurrentPage }) {
+    const goToHome = () => {
+      setCurrentPage("home")
+    }
+    const goToAbout = () => {
+      setCurrentPage("about")
+    }
+    const goToContact = () => {
+      setCurrentPage("contact")
+    }
     return (
-      <nav class="navbar">
-        <a href="#">HOME</a>
-        <a href="#">ABOUT</a>
-        <a href="#">CONTACT</a>
+      <nav className="navbar">
+        <a onClick={goToHome}>HOME</a>
+        <a onClick={goToAbout}>ABOUT</a>
+        <a onClick={goToContact}>CONTACT</a>
       </nav>
     );
 }
 
-function Header() {
-    const [expanded, setExpanded] = useState(false);
-    const toggleNav = () => {
-      setExpanded(!expanded)
+function Header({ setCurrentPage }) {
+    const [expandNavBar, setExpandNavBar] = useState(false);
+    const toggleNavBar = () => {
+      setExpandNavBar(!expandNavBar)
     }
     return (
       <header>
-        <div className="hamburger" onClick={toggleNav}>
+        <div className="hamburger" onClick={toggleNavBar}>
           <div className="line"></div>
           <div className="line"></div>
           <div className="line"></div>
@@ -27,7 +36,7 @@ function Header() {
         <div className="title">
           <a href="assets/html/index.html">J I N X</a>
         </div>
-        {expanded && NavBar()}
+        {expandNavBar && <NavBar setCurrentPage={setCurrentPage}/>}
       </header>
     );
 }
