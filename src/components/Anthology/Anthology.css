@@ -9,25 +9,33 @@
     font-weight: 300;
   }
     
-    .chapterContent {
+  .chapter {
     color: #dbdbdb;
     margin-left: 140px;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 1.5;
-    width: 600px;
+    width: 700px;
     margin-bottom: 400px;
   }
 
+  .chapterContent {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: justify;
+    text-indent: 40px;
+  }
+
   .chapterTitle {
-    color: #dbdbdb;
     font-size: 45px;
     font-weight: 300;
+    text-align: center;
+  }
+
+  .tab {
+    margin-left: 25px;
   }
 
   .paupers-daughter-verse {
     font-family: inherit;
     text-align: center;
-    margin-left: 0px;
     line-height: 1.5;
   }

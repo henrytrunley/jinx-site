@@ -1,6 +1,7 @@
 import { Fragment, useState } from "react";
 import "./Anthology.css"
 
+import thePaupersDaughter from "./Chapters/0-the_paupers_daughter.jsx"
 import smokeAndMirrors from "./Chapters/1-smoke_and_mirrors.jsx"
 
 
@@ -8,7 +9,7 @@ const orderedChapters = [
     {
         index: 0,
         title: "The Pauper's Daughter",
-        content: "",
+        content: thePaupersDaughter,
     },
     {
         index: 1,
@@ -17,8 +18,8 @@ const orderedChapters = [
     },
     {
         index: 2,
-        title: "Leprechaun Hunt",
-        content: "",
+        title: "Witch Hunt",
+        content: "Coming Soon!",
     },
 ];
 
@@ -51,7 +52,7 @@ function Contents({ setChapterIndex }) {
 
 function Anthology() {
     const [chapterIndex, setChapterIndex] = useState(-1);
-    
+
     return (
       <Fragment>
         {chapterIndex==-1 && <Contents setChapterIndex={setChapterIndex}/>}

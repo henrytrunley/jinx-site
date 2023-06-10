@@ -5,7 +5,7 @@ import "./App.css";
 
 
 function GetPage({ currentPage }) {
-    if (currentPage == "home") {
+    if (currentPage == "archives") {
         return Anthology()
     }
     else {
@@ -17,7 +17,7 @@ function GetPage({ currentPage }) {
 
 
 function App() {
-    const [currentPage, setCurrentPage] = useState("home");
+    const [currentPage, setCurrentPage] = useState("archives");
     
     return (
       <Fragment>

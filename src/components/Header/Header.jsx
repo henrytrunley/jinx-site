@@ -3,8 +3,8 @@ import "./Header.css"
 
 
 function NavBar({ setCurrentPage }) {
-    const goToHome = () => {
-      setCurrentPage("home")
+    const goToArchives = () => {
+      setCurrentPage("archives")
     }
     const goToAbout = () => {
       setCurrentPage("about")
@@ -14,7 +14,7 @@ function NavBar({ setCurrentPage }) {
     }
     return (
       <nav className="navbar">
-        <a onClick={goToHome}>HOME</a>
+        <a onClick={goToArchives}>ARCHIVES</a>
         <a onClick={goToAbout}>ABOUT</a>
         <a onClick={goToContact}>CONTACT</a>
       </nav>
