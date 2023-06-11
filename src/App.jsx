@@ -1,23 +1,11 @@
 
 import { Fragment, useState } from "react";
-import { Header, Anthology } from "./components/index";
+import { Header, Main } from "./components/index";
 import "./App.css";
 
 
-function GetPage({ currentPage }) {
-    if (currentPage == "archives") {
-        return Anthology()
-    }
-    else {
-        return (
-            <div></div>
-        )
-    }
-}
-
-
 function App() {
-    const [currentPage, setCurrentPage] = useState("archives");
+    const [currentPage, setCurrentPage] = useState("contents");
     
     return (
       <Fragment>
@@ -25,7 +13,7 @@ function App() {
           <Header setCurrentPage={setCurrentPage}/>
         </header>
         <main>
-          <GetPage currentPage={currentPage}/>
+          <Main currentPage={currentPage} setCurrentPage={setCurrentPage}/>
         </main>
       </Fragment>
     );

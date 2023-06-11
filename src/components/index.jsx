@@ -1,4 +1,4 @@
 import Header from "./Header/Header"
-import Anthology from "./Anthology/Anthology"
+import Main from "./Main/Main"
 
-export { Header, Anthology };
+export { Header, Main };
