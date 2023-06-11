@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { Fragment, useState, useEffect } from "react";
 import "./Main.css"
 
 import thePaupersDaughter from "./Chapters/0-the_paupers_daughter.jsx"
@@ -14,8 +14,8 @@ chapters.set("witch_hunt", {"title": "Witch Hunt", "content": "Coming soon!"});
 function Chapter({ currentPage }) {
     const chapter = chapters.get(currentPage);
     return (
-        <div className="chapter">
-          <h1 className="chapterTitle">{chapter.title}</h1>
+        <div className="anthology">
+          <h1 className="chapterTitle move-title">{chapter.title}</h1>
           <div className="chapterContent">{chapter.content}</div>
         </div>
     );
@@ -23,15 +23,22 @@ function Chapter({ currentPage }) {
 
 
 function Contents({ setCurrentPage }) {
+    const [fadeOtherTitles, setFadeOtherTitles] = useState(false);
+    const [moveTitle, setMoveTitle] = useState("");
+
+    function handleClick(chapterName) {
+        setFadeOtherTitles(true);
+        setMoveTitle(chapterName);
+        setTimeout(() => {
+            setCurrentPage(chapterName);
+        }, 3100.0);
+    };
+
     return (
-        <div className="contents">
-          <ul>
+        <div className="anthology">
             {[...chapters].map(([chapterName, chapterContent]) => (
-                <li>
-                  <a onClick={() => setCurrentPage(chapterName)}>{chapterContent.title}</a>
-                </li>
+                <h1 onClick={() => handleClick(chapterName)} key={chapterName} className={(fadeOtherTitles && (chapterName!=moveTitle)) ? "fade-out chapterTitle" : ((chapterName==moveTitle) ? "move-title chapterTitle" : "chapterTitle")}>{chapterContent.title}</h1>
             ))}
-          </ul>
         </div>
     );
 };
