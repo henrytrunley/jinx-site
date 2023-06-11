@@ -1,6 +1,6 @@
 const content = (
     <>
-      <pre class="paupers-daughter-verse">
+      <pre className="paupers-daughter-verse">
         <em>
 {`Heed the tale o'the greedy pauper
 Thought that wealth would end his torture
