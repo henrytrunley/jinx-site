@@ -23,10 +23,6 @@ function Chapter({ currentPage }) {
 
 
 function Contents({ setCurrentPage }) {
-    for (const [key, value] of chapters) {
-        console.log(key)
-        console.log(value.title)
-    }
     return (
         <div className="contents">
           <ul>
@@ -43,7 +39,6 @@ function Contents({ setCurrentPage }) {
 
 function Main({ currentPage, setCurrentPage }) {
     if (currentPage == "contents") {
-        console.log("NAVIGATING TO CONTENTS")
         return(
           <Fragment>
             <Contents setCurrentPage={setCurrentPage}/>
