@@ -1,19 +1,17 @@
-.contents li {
-    margin-bottom: 30px;
+ 
+.anthology {
+    color: #dbdbdb;
+    margin: auto;
+    width: 700px;
+    margin-top: 200px;
+    margin-bottom: 200px;
   }
 
-  /* .contents li a {
-    color: #dbdbdb;
-    margin-left: 50px;
-    font-size: 50px;
-    font-weight: 300;
-  } */
-    
-  .anthology {
-    color: #dbdbdb;
-    margin-left: 140px;
-    width: 700px;
-    margin-bottom: 400px;
+  .contents h1 {
+    cursor: pointer;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
   }
 
   .chapterContent {
@@ -41,8 +39,11 @@
     font-size: 45px;
     font-weight: 300;
     text-align: center;
-    /* transition: opacity 1s, height 1s, display 0s 0.6s; */
-    margin: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 60px;
+    height: 45px;
   }
 
   .tab {
@@ -66,17 +67,19 @@
 
   @keyframes shrinkHeight {
     from {
-      max-height: 500px;
+      height: 45px;
+      margin-bottom: 60px;
     }
     to {
-      max-height: 0;
+      height: 0;
+      margin-bottom: 0;
     }
   }
 
   .fade-out {
     animation-name: fadeOut, shrinkHeight;
-    animation-duration: 0.5s, 1.5s;
-    animation-delay: 0s, 0s;
+    animation-duration: 0.5s, 1s;
+    animation-delay: 0s, 0.5s;
     animation-timing-function: ease-out, ease-in-out;
     animation-fill-mode: forwards, forwards;
   }

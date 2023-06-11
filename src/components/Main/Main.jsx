@@ -27,15 +27,17 @@ function Contents({ setCurrentPage }) {
     const [moveTitle, setMoveTitle] = useState("");
 
     function handleClick(chapterName) {
-        setFadeOtherTitles(true);
-        setMoveTitle(chapterName);
-        setTimeout(() => {
-            setCurrentPage(chapterName);
-        }, 3100.0);
+        if (!fadeOtherTitles) {
+            setFadeOtherTitles(true);
+            setMoveTitle(chapterName);
+            setTimeout(() => {
+                setCurrentPage(chapterName);
+            }, 2100.0);
+        };
     };
 
     return (
-        <div className="anthology">
+        <div className={fadeOtherTitles ? "anthology" : "anthology contents"}>
             {[...chapters].map(([chapterName, chapterContent]) => (
                 <h1 onClick={() => handleClick(chapterName)} key={chapterName} className={(fadeOtherTitles && (chapterName!=moveTitle)) ? "fade-out chapterTitle" : ((chapterName==moveTitle) ? "move-title chapterTitle" : "chapterTitle")}>{chapterContent.title}</h1>
             ))}
