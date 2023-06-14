@@ -22,35 +22,31 @@ function Chapter({ currentPage }) {
 };
 
 
-function Contents({ setCurrentPage }) {
+function Contents({ changePageWithBlockingTransition }) {
     const [fadeOtherTitles, setFadeOtherTitles] = useState(false);
     const [moveTitle, setMoveTitle] = useState("");
 
     function handleClick(chapterName) {
-        if (!fadeOtherTitles) {
-            setFadeOtherTitles(true);
-            setMoveTitle(chapterName);
-            setTimeout(() => {
-                setCurrentPage(chapterName);
-            }, 2100.0);
-        };
+        function startFunc() { setFadeOtherTitles(true); setMoveTitle(chapterName); }
+        function endFunc() {}
+        changePageWithBlockingTransition(chapterName, startFunc, endFunc, 2100.0);
     };
 
     return (
         <div className={fadeOtherTitles ? "anthology" : "anthology contents"}>
             {[...chapters].map(([chapterName, chapterContent]) => (
-                <h1 onClick={() => handleClick(chapterName)} key={chapterName} className={(fadeOtherTitles && (chapterName!=moveTitle)) ? "fade-out chapterTitle" : ((chapterName==moveTitle) ? "move-title chapterTitle" : "chapterTitle")}>{chapterContent.title}</h1>
+                <h1 onClick={() => handleClick(chapterName)} key={chapterName} className={(fadeOtherTitles && (chapterName!=moveTitle)) ? "fade-out-shrink chapterTitle" : ((chapterName==moveTitle) ? "move-title chapterTitle" : "chapterTitle")}>{chapterContent.title}</h1>
             ))}
         </div>
     );
 };
 
 
-function Main({ currentPage, setCurrentPage }) {
+function Main({ currentPage, changePageWithBlockingTransition }) {
     if (currentPage == "contents") {
         return(
           <Fragment>
-            <Contents setCurrentPage={setCurrentPage}/>
+            <Contents changePageWithBlockingTransition={changePageWithBlockingTransition}/>
           </Fragment>
         );
     }

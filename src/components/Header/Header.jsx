@@ -1,17 +1,18 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import "./Header.css"
 
 
-function NavBar({ setCurrentPage }) {
+function NavBar({ fadeTo }) {
+    
     const goToContents = () => {
-      setCurrentPage("contents")
-    }
+      fadeTo("contents");
+    };
     const goToAbout = () => {
-      setCurrentPage("about")
-    }
+      fadeTo("about");
+    };
     const goToContact = () => {
-      setCurrentPage("contact")
-    }
+      fadeTo("contact");
+    };
     return (
       <nav className="navbar">
         <a onClick={goToContents}>ARCHIVES</a>
@@ -21,13 +22,13 @@ function NavBar({ setCurrentPage }) {
     );
 }
 
-function Header({ setCurrentPage }) {
+function Header({ fadeTo }) {
     const [expandNavBar, setExpandNavBar] = useState(false);
     const toggleNavBar = () => {
       setExpandNavBar(!expandNavBar)
     }
     return (
-      <header>
+      <Fragment>
         <div className="hamburger" onClick={toggleNavBar}>
           <div className="line"></div>
           <div className="line"></div>
@@ -36,8 +37,8 @@ function Header({ setCurrentPage }) {
         <div className="title">
           <a href="assets/html/index.html">J I N X</a>
         </div>
-        {expandNavBar && <NavBar setCurrentPage={setCurrentPage}/>}
-      </header>
+        {expandNavBar && <NavBar fadeTo={fadeTo}/>}
+      </Fragment>
     );
 }
 

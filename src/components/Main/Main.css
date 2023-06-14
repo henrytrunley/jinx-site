@@ -77,6 +77,14 @@
   }
 
   .fade-out {
+    animation-name: fadeOut;
+    animation-duration: 0.5s;
+    animation-delay: 0s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+
+  .fade-out-shrink {
     animation-name: fadeOut, shrinkHeight;
     animation-duration: 0.5s, 1s;
     animation-delay: 0s, 0.5s;
