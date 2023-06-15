@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/jinx-site/static/css/main.ddde1069.css",
+    "main.js": "/jinx-site/static/js/main.0f8f982f.js",
+    "index.html": "/jinx-site/index.html",
+    "main.ddde1069.css.map": "/jinx-site/static/css/main.ddde1069.css.map",
+    "main.0f8f982f.js.map": "/jinx-site/static/js/main.0f8f982f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ddde1069.css",
+    "static/js/main.0f8f982f.js"
+  ]
+}
