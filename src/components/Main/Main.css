@@ -96,12 +96,16 @@
 
   .about {
     color: #dbdbdb;
-    margin: auto;
-    max-width: 700px;
+    margin-left: 400px;
+    width: 1400px;
     margin-top: 200px;
     margin-bottom: 200px;
     padding-left: 25px;
     padding-right: 25px;
+  }
+
+  .aboutContent {
+    float: left;
   }
 
   .aboutTitle {
@@ -126,6 +130,12 @@
     margin-right: 0px;
     margin-bottom: 60px;
     height: 45px;
+  }
+
+  .aboutImage {
+    float: right;
+    /* display: inline-block; */
+    /* position: relative; */
   }
 
 
