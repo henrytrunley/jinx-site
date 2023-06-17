@@ -1,6 +1,7 @@
 import { Fragment, useState, useEffect } from "react";
 import "./Main.css"
 
+import About from "./About.jsx"
 import thePaupersDaughter from "./Chapters/0-the_paupers_daughter.jsx"
 import smokeAndMirrors from "./Chapters/1-smoke_and_mirrors.jsx"
 
@@ -16,7 +17,7 @@ function Chapter({ currentPage }) {
     return (
         <div className="anthology">
           <h1 className="chapterTitle">{chapter.title}</h1>
-          <div className="chapterContent">{chapter.content}</div>
+          <div className="chapterContent fade-in">{chapter.content}</div>
         </div>
     );
 };
@@ -33,7 +34,7 @@ function Contents({ changePageWithBlockingTransition }) {
     };
 
     return (
-        <div className={fadeOtherTitles ? "anthology" : "anthology contents"}>
+        <div className={fadeOtherTitles ? "anthology" : "anthology contents fade-in"}>
             {[...chapters].map(([chapterName, chapterContent]) => (
                 <h1 onClick={() => handleClick(chapterName)} key={chapterName} className={(fadeOtherTitles && (chapterName!=moveTitle)) ? "fade-out-shrink chapterTitle" : "chapterTitle"}>{chapterContent.title}</h1>
             ))}
@@ -59,7 +60,9 @@ function Main({ currentPage, changePageWithBlockingTransition }) {
     }
     else if (currentPage == "about") {
         return (
-          <div></div>
+          <Fragment>
+            <About/>
+          </Fragment>
         );
     }
     else {

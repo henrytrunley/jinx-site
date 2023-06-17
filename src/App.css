@@ -9,10 +9,6 @@ body {
     text-decoration: none;
   }
 
-  ul {
-    list-style: none;
-  }
-
   header {
     position: fixed;
     color: #dbdbdb;
@@ -23,8 +19,6 @@ body {
 
   main {
     color: #dbdbdb;
-    /* padding-left: 500px; */
-    /* padding-top: 300px; */
     display: flex;
     align-items: center;
   }
