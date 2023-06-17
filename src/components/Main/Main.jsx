@@ -15,7 +15,7 @@ function Chapter({ currentPage }) {
     const chapter = chapters.get(currentPage);
     return (
         <div className="anthology">
-          <h1 className="chapterTitle move-title">{chapter.title}</h1>
+          <h1 className="chapterTitle">{chapter.title}</h1>
           <div className="chapterContent">{chapter.content}</div>
         </div>
     );
@@ -35,7 +35,7 @@ function Contents({ changePageWithBlockingTransition }) {
     return (
         <div className={fadeOtherTitles ? "anthology" : "anthology contents"}>
             {[...chapters].map(([chapterName, chapterContent]) => (
-                <h1 onClick={() => handleClick(chapterName)} key={chapterName} className={(fadeOtherTitles && (chapterName!=moveTitle)) ? "fade-out-shrink chapterTitle" : ((chapterName==moveTitle) ? "move-title chapterTitle" : "chapterTitle")}>{chapterContent.title}</h1>
+                <h1 onClick={() => handleClick(chapterName)} key={chapterName} className={(fadeOtherTitles && (chapterName!=moveTitle)) ? "fade-out-shrink chapterTitle" : "chapterTitle"}>{chapterContent.title}</h1>
             ))}
         </div>
     );
