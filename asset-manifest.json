@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/jinx-site/static/css/main.ddde1069.css",
-    "main.js": "/jinx-site/static/js/main.0f8f982f.js",
+    "main.css": "/jinx-site/static/css/main.a540201c.css",
+    "main.js": "/jinx-site/static/js/main.cdc038c3.js",
+    "static/media/jinx-portrait.png": "/jinx-site/static/media/jinx-portrait.f81a9cc3f49e7830ce02.png",
     "index.html": "/jinx-site/index.html",
-    "main.ddde1069.css.map": "/jinx-site/static/css/main.ddde1069.css.map",
-    "main.0f8f982f.js.map": "/jinx-site/static/js/main.0f8f982f.js.map"
+    "main.a540201c.css.map": "/jinx-site/static/css/main.a540201c.css.map",
+    "main.cdc038c3.js.map": "/jinx-site/static/js/main.cdc038c3.js.map"
   },
   "entrypoints": [
-    "static/css/main.ddde1069.css",
-    "static/js/main.0f8f982f.js"
+    "static/css/main.a540201c.css",
+    "static/js/main.cdc038c3.js"
   ]
 }
