@@ -5,7 +5,7 @@ import "./App.css";
 
 
 function App() {
-    const [currentPage, setCurrentPage] = useState("contents");
+    const [currentPage, setCurrentPage] = useState("about");
     const [pageChangeable, setPageChangeable] = useState(true)
     const [fadeOut, setFadeOut] = useState(false);
 

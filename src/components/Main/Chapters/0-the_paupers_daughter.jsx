@@ -1,8 +1,8 @@
 const content = (
     <>
       <pre className="paupers-daughter-verse">
-        <em>
-{`Heed the tale o'the greedy pauper
+        <em>{
+`Heed the tale o'the greedy pauper
 Thought that wealth would end his torture
 Sought help from a clever Witch
 To strike a deal to make him rich
@@ -50,8 +50,8 @@ The Witch’s curse fed off his strife
 From rags to riches, back to rags
 She took it all, the evil hag
 So heed his tale, and spare a thought for
-Jinx, the pauper's goblin daughter`}
-        </em>
+Jinx, the pauper's goblin daughter`
+        }</em>
       </pre>
     </>
 );
