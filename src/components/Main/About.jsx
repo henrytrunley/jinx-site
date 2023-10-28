@@ -5,9 +5,8 @@ function About() {
       <div className="aboutFullPage">
         <div className="about fade-in">
           <div className="aboutContent">
-            <h1 className="aboutTitle">Hi. I'm Jinx.</h1>
-            <h2 className="aboutSubtitle">Goblin. Rascal. Witchcraft Extraordinaire.</h2>
-            <p className="aboutText">From my working class roots in the suburbs of Epinhoff, I’ve spent a decade training as a Witch and working my way up the arcane hierarchy. This is an archive of my most memorable adventures.</p>
+            <h1 className="aboutTitle">Goblin. Rascal. Witchcraft Extraordinaire.</h1>
+            <p className="aboutText">Jinx hails from the land of Hardak, where she enjoys a rich and varied lifestyle. Whether she's robbing Rosefall's infamous vampires or hunting devils in the depths of hell, she's loving every minute of it. Herein lies an account of her most memorable adventures as she works her way up the arcane hierarchy.</p>
           </div>
           <img className="aboutImage" src={jinxPortrait}/>
         </div>
