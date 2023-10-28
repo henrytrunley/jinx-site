@@ -35,7 +35,7 @@ function Header({ fadeTo }) {
           <div className="line"></div>
         </div>
         <div className="title">
-          <a href="assets/html/index.html">J I N X</a>
+          <a href="public/index.html">J I N X</a>
         </div>
         {expandNavBar && <NavBar fadeTo={fadeTo}/>}
       </Fragment>
